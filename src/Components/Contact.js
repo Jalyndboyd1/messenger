@@ -10,6 +10,7 @@ export default function Contact({
   timestamp
 }) {
   const dispatch = useDispatch();
+  // Fetch Messages and add messages to dispatched object
   return (
     <div
       className="contact"
@@ -18,7 +19,6 @@ export default function Contact({
           changeContact({
             contactPic,
             contactName,
-            message,
             timestamp
           })
         )
