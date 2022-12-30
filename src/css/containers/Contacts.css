@@ -1,3 +1,29 @@
 .contacts {
   flex: 0.3;
+  height: 100vh;
+}
+
+.contacts__header {
+  background-color: #e5e5ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+
+.contacts__searchbar {
+  display: flex;
+  align-items: center;
+  background-color: #d1d1d6;
+  border-radius: 5px;
+}
+
+.contacts__searchbar > input {
+  border: none;
+  background-color: #d1d1d6;
+}
+
+.contacts__searchbar > input:focus {
+  outline: none;
 }
