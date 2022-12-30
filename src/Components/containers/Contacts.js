@@ -10,12 +10,15 @@ export default function Contacts() {
       <header className="contacts__header">
         <div className="contacts__searchbar">
           {/* Filter Contacts List */}
-          <SearchIcon />
+          <SearchIcon sx={{ marginRight: "5px" }} />
           <input placeholder="Search" />
         </div>
         <CreateRoundedIcon
           sx={{
-            color: "#c7c7cc"
+            color: "#c7c7cc",
+            padding: "5px",
+            borderRadius: "50%",
+            backgroundColor: "#fff"
           }}
         />
       </header>
@@ -26,7 +29,7 @@ export default function Contacts() {
           contactName="Jalyn Boyd"
           message="Hello World"
           timestamp="12:30pm"
-          contactPic=''
+          contactPic=""
         />
       </div>
     </div>

@@ -17,6 +17,7 @@
   align-items: center;
   background-color: #d1d1d6;
   border-radius: 5px;
+  padding: 4px;
 }
 
 .contacts__searchbar > input {
