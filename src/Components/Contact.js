@@ -9,7 +9,7 @@ export default function Contact({
 }) {
   return (
     <div className="contact">
-      <Avatar src={contactPic} alt={contactName} sx={{ marginRight: 3 }} />
+      <Avatar src={contactPic} alt={contactName} sx={{ marginRight: 2 }} />
       <div className="contact__details">
         <h4>{contactName}</h4>
         <p>{message}</p>
