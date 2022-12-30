@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./css/App.css";
+import Contacts from "./Components/containers/Contacts";
+import Messenger from "./Components/containers/Messenger";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {/* Container Left Contacts */}
+      <Contacts />
+      {/* Container Right for Messeages of Selected (current) Contacted */}
+      <Messenger/>
     </div>
   );
 }
