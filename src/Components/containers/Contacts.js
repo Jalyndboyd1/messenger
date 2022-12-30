@@ -2,6 +2,7 @@ import React from "react";
 import "../../css/containers/Contacts.css";
 import SearchIcon from "@mui/icons-material/Search";
 import CreateRoundedIcon from "@mui/icons-material/CreateRounded";
+import Contact from "../Contact";
 
 export default function Contacts() {
   return (
@@ -21,6 +22,12 @@ export default function Contacts() {
       {/* column of contact components */}
       <div className="contacts__column">
         {/* contact components rendered here */}
+        <Contact
+          contactName="Jalyn Boyd"
+          message="Hello World"
+          timestamp="12:30pm"
+          contactPic=''
+        />
       </div>
     </div>
   );
