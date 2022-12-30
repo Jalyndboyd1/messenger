@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from '../reducers/counter'
+import contactsReducer from '../reducers/contacts'
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    contacts: contactsReducer,
   },
 })

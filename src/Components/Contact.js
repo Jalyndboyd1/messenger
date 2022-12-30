@@ -1,14 +1,29 @@
 import { Avatar } from "@mui/material";
 import "../css/Contact.css";
+import { changeContact } from "../reducers/contacts";
+import { useDispatch } from "react-redux";
 
 export default function Contact({
-  contactPic,
+  contactPic = '',
   contactName,
   message,
   timestamp
 }) {
+  const dispatch = useDispatch();
   return (
-    <div className="contact">
+    <div
+      className="contact"
+      onClick={() =>
+        dispatch(
+          changeContact({
+            contactPic,
+            contactName,
+            message,
+            timestamp
+          })
+        )
+      }
+    >
       <Avatar src={contactPic} alt={contactName} sx={{ marginRight: 2 }} />
       <div className="contact__details">
         <h4>{contactName}</h4>

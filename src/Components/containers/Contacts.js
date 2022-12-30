@@ -5,8 +5,9 @@ import CreateRoundedIcon from "@mui/icons-material/CreateRounded";
 import Contact from "../Contact";
 import contacts from "../../data/contacts.json";
 
+
 export default function Contacts() {
-  console.log(contacts);
+
   return (
     <div className="contacts">
       <header className="contacts__header">
