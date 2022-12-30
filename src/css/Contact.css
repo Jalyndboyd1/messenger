@@ -9,6 +9,7 @@
 .contact:hover{
     background-color: #047afd;
     cursor: pointer;
+    color: antiquewhite;
 }
 
 .contact__details {
