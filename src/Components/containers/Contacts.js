@@ -6,17 +6,17 @@ import Contact from "../Contact";
 import contacts from "../../data/contacts.json";
 
 export default function Contacts() {
-  const [filterContact, setFilteredContact] = useState("");
-  const [filteredContacts, setFilteredContacts] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
+  const [filteredContacts, setSearchInputs] = useState([]);
 
   useEffect(() => {
-    if (filterContact) {
+    if (searchInput) {
       const filtered = contacts.filter((contact) => {
-        return contact.contactName.includes(filterContact);
+        return contact.contactName.includes(searchInput);
       });
-      setFilteredContacts(filtered);
+      setSearchInputs(filtered);
     }
-  }, [filterContact]);
+  }, [searchInput]);
 
   return (
     <div className="contacts">
@@ -26,8 +26,8 @@ export default function Contacts() {
           <SearchIcon sx={{ marginRight: "5px" }} />
           <input
             placeholder="Search"
-            onChange={(e) => setFilteredContact(e.target.value)}
-            value={filterContact}
+            onChange={(e) => setSearchInput(e.target.value)}
+            value={searchInput}
           />
         </div>
         <CreateRoundedIcon
@@ -35,14 +35,15 @@ export default function Contacts() {
             color: "#c7c7cc",
             padding: "5px",
             borderRadius: "50%",
-            backgroundColor: "#fff"
+            backgroundColor: "#fff",
+            cursor: "pointer"
           }}
         />
       </header>
       {/* column of contact components */}
       <div className="contacts__column">
         {/* contact components rendered here */}
-        {filterContact
+        {searchInput
           ? filteredContacts.map((contact) => {
               return (
                 <Contact
