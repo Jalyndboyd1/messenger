@@ -1,16 +1,16 @@
 import { Avatar } from "@mui/material";
 import "../css/Contact.css";
 import { changeContact } from "../reducers/contacts";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Contact({
   contactPic = '',
   contactName,
   message,
-  timestamp
 }) {
+  const currentContact = useSelector((state) => state.contacts.selectedContact);
   const dispatch = useDispatch();
-  // Fetch Messages and add messages to dispatched object
+
   return (
     <div
       className="contact"
@@ -19,7 +19,8 @@ export default function Contact({
           changeContact({
             contactPic,
             contactName,
-            timestamp
+            id: Math.floor(Math.random()),
+            messages: [],
           })
         )
       }
@@ -29,7 +30,7 @@ export default function Contact({
         <h4>{contactName}</h4>
         <p>{message}</p>
       </div>
-      <p className="contact__timestamp">{timestamp}</p>
+      <p className="contact__timestamp">{""}</p>
     </div>
   );
 }
