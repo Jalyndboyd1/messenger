@@ -1,8 +1,6 @@
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAd8nGJuoCFlg5oIxOwQ7KiOU2HeCRvsvQ",
   authDomain: "imessage-clone-8ed1f.firebaseapp.com",
@@ -14,3 +12,4 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const firestore = getFirestore(app)
